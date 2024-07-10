@@ -188,7 +188,7 @@ async function runFastify (args, additionalOptions, serverOptions, buildOptions 
     done()
   })
 
-  if (additionalOptions.ready) {
+  if (additionalOptions && additionalOptions.ready) {
     await fastify.ready()
   } else if (opts.address) {
     await fastify.listen({ port: opts.port, host: opts.address })
