@@ -165,6 +165,7 @@ async function runFastify (args, additionalOptions, serverOptions, buildOptions 
   }
 
   const fastify = Fastify(options)
+
   if (opts.prefix) {
     opts.pluginOptions.prefix = opts.prefix
   }
